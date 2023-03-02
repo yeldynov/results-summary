@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-bg: hsla(0, 100%, 67%, 5%);
+  --dark-red-bg: hsla(0, 100%, 67%, 25%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-bg: hsl(39, 100%, 56%, 5%);
+  --dark-orangey-yellow-bg: hsl(39, 100%, 56%, 25%);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-bg: hsl(166, 100%, 37%, 5%);
+  --dark-green-teal-bg: hsl(166, 100%, 37%, 25%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-bg: hsl(234, 85%, 45%, 5%);
+  --dark-cobalt-blue-bg: hsl(234, 85%, 45%, 25%);
+  /* bg */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  /* circle */
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-lavender: hsl(240, 19%, 62%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background: var(--pale-blue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  width: auto;
+  background-color: var(--white);
+  border-radius: 25px;
+}
+
+.top {
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  padding: 40px;
+  color: var(--pale-blue);
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.top h1 {
+  text-align: center;
+}
+
+.result {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--violet-blue),
+    var(--persian-blue)
+  );
+  transition: all 3s linear;
+}
+
+.result:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+  color: var(--green-teal);
+}
+
+.result h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.result h3 {
+  color: var(--dark-lavender);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description h2 {
+  font-size: 1.4rem;
+}
+
+.description p {
+  color: var(--dark-lavender);
+  line-height: 22px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+  width: 80%;
+  padding: 10%;
+  text-align: left;
+  gap: 15px;
+}
+
+.bottom h1 {
+  color: var(--dark-gray-blue);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.red {
+  background: var(--light-red-bg);
+  color: var(--light-red);
+}
+
+.red:hover {
+  background: var(--dark-red-bg);
+  cursor: pointer;
+}
+
+.yellow {
+  background: var(--orangey-yellow-bg);
+  color: var(--orangey-yellow);
+}
+
+.yellow:hover {
+  background: var(--dark-orangey-yellow-bg);
+  cursor: pointer;
+}
+
+.green {
+  background: var(--green-teal-bg);
+  color: var(--green-teal);
+}
+
+.green:hover {
+  background: var(--dark-green-teal-bg);
+  cursor: pointer;
+}
+
+.blue {
+  background: var(--cobalt-blue-bg);
+  color: var(--cobalt-blue);
+}
+
+.blue:hover {
+  background: var(--dark-cobalt-blue-bg);
+  cursor: pointer;
+}
+
+.card-title {
+  display: flex;
+  gap: 10px;
+}
+
+.card h3 {
+  color: var(--dark-gray-blue);
+  font-weight: bold;
+}
+
+h3 span {
+  color: var(--dark-lavender);
+}
+
+button {
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 30px;
+  background: var(--dark-gray-blue);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--light-lavender);
+}
+
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+@media screen and (min-width: 375px) {
+  main {
+    flex-direction: row;
+    max-width: 50%;
+  }
+
+  .top {
+    border-radius: 25px;
+    min-height: 50vh;
+  }
+
+  .bottom {
+    margin: 0;
+    padding: 0 30px 0 30px;
+  }
+}
